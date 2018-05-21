@@ -1,0 +1,289 @@
+
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Wrapper class used from https://startbootstrap.com/template-overviews/simple-sidebar) */
+#wrapper {
+  padding-right: 0;
+  padding-top: 110px;
+  padding-left: 140px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-right: 100px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  padding-top: 0px;
+  position: fixed;
+  right: 120px;
+  width: 0;
+  height: 70%;
+  margin-right: -100px;
+  overflow-y: auto;
+  background: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 200px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-left: -100px;
+}
+
+/* Main text */
+
+h4.main_statement{
+font: bold large serif;
+}
+p.main_headline{
+font: italic large serif;
+}
+p.main_body{
+font: large serif;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 10px;
+  width: 200px;
+  margin: 0;
+  padding: 40px 0px 0px 0px;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  text-align: justify;
+  color: #000;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: underline;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #999999;
+  background: none;
+}
+
+
+
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 110px;
+
+  }
+  #wrapper.toggled {
+    padding-right: 240px;
+  }
+  #sidebar-wrapper {
+    width: 0;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-left: 0;
+  }
+}
+
+/* button styles */
+.toggle_button {
+  color: black;
+  background-color: white;
+  padding: 14px 14px 14px 14px;
+  border: 2px solid #FFAB00; /* orange */
+  border-radius: 0px 50px 50px 0px;
+  text-align: justify;
+  text-decoration: none;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+
+}
+.toggle_button:hover, .toggle_button:active{
+  background-color: #FFAB00;
+  color: white;
+}
+
+
+.submit_button {
+  color: black;
+  background-color: white;
+  padding: 14px 14px 14px 14px;
+  border: 2px solid #FFAB00; /* orange */
+  border-radius: 50px 0px 0px 50px;
+  text-align: justify;
+  text-decoration: none;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+
+}
+.submit_button:hover, .submit_button:active{
+  background-color: #FFAB00;
+  color: white;
+}
+
+.feedback_button {
+  color: black;
+  background-color: white;
+  padding: 9px;
+  border: 2px solid #FFAB00; /* orange */
+  border-radius: 50px 0px 0px 50px;
+  text-align: justify;
+  text-decoration: none;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+
+}
+.feedback_button:hover{
+  background-color: #FFAB00;
+  color: white;
+}
+
+/* left sidebar from tutorial*/
+.sidebar-left {
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  left: 5px;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky-left {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky-left {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+.sidebar-left .nav-link {
+  font-weight: 400;
+  color: #FFAB00;
+  text-align: left;
+}
+
+.sidebar-left .nav-link {
+  margin-right: 4px;
+  color: #999;
+}
+
+.sidebar-left .nav-link.active {
+  color: #FFAB00;
+}
+
+.sidebar-left ,
+.sidebar-left .nav-link.active{
+  color: #FFAB00;
+}
+.nav-link:hover{
+  color: #FFAB00;
+  text-decoration: underline;
+}
+
+/* Team member photos */
+.imgteam {
+  overflow: hidden;
+  float: left;
+  padding: 5px;
+  align-self: center;
+  border: solid #FFAB00;
+  border-radius: 70px;
+}
+.textteam{
+  padding-right: 5px;
+  padding-top: 10px;
+  float: right;
+  color: #FFAB00;
+  text-decoration: underline;
+  font-size: 20px;
+  text-align: center;
+}
+.textteam_drop{
+  padding-right: 3px;
+  color: #FFAB00;
+  text-decoration: underline;
+  font-size: 10px;
+  text-align: left;
+}
+.imgteam_drop {
+  overflow: hidden;
+  float: left;
+  padding: 5px;
+}
+
+.box {
+   display: flex;
+   align-items:center;
+   border-bottom: solid #FFE57F;
+   border-top: solid #FFE57F;
+}
+.sec_box {
+   display: flex;
+   align-items:center;
+   border-bottom: solid #FFE57F;
+}
+
+.main_box {
+   float: left;
+}
+/* group chat */
